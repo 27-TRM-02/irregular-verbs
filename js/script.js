@@ -152,34 +152,8 @@ function creaNivel() {
 
 //Esta función actualiza y guarda las cookies de los trofeos ganados
 function trofeosCookies(trofeos) {
-  if (nivel == 10) {
     document.cookie =
-      "trofeos10=" + trofeos + "; expires=Thu, 01 Jan 2022 00:00:00 UTC;";
-  } else if (nivel == 20) {
-    document.cookie =
-      "trofeos20=" + trofeos + "; expires=Thu, 01 Jan 2022 00:00:00 UTC;";
-  } else if (nivel == 30) {
-    document.cookie =
-      "trofeos30=" + trofeos + "; expires=Thu, 01 Jan 2022 00:00:00 UTC;";
-  } else if (nivel == 40) {
-    document.cookie =
-      "trofeos40=" + trofeos + "; expires=Thu, 01 Jan 2022 00:00:00 UTC;";
-  } else if (nivel == 50) {
-    document.cookie =
-      "trofeos50=" + trofeos + "; expires=Thu, 01 Jan 2022 00:00:00 UTC;";
-  } else if (nivel == 60) {
-    document.cookie =
-      "trofeos60=" + trofeos + "; expires=Thu, 01 Jan 2022 00:00:00 UTC;";
-  } else if (nivel == 70) {
-    document.cookie =
-      "trofeos70=" + trofeos + "; expires=Thu, 01 Jan 2022 00:00:00 UTC;";
-  } else if (nivel == 80) {
-    document.cookie =
-      "trofeos80=" + trofeos + "; expires=Thu, 01 Jan 2022 00:00:00 UTC;";
-  } else if (nivel == 140) {
-    document.cookie =
-      "trofeos140=" + trofeos + "; expires=Thu, 01 Jan 2022 00:00:00 UTC;";
-  }
+    `trofeos${nivel}=${trofeos}; expires=Thu, 01 Jan 2022 00:00:00 UTC;`;
 }
 
 //Esta función va a servir para conseguir la información de la cookie que buscamos
@@ -193,122 +167,16 @@ function getCookie(nombre) {
 //Esta función va cargar la información de las cookies para que tengamos los trofeos que
 //ya habíamos ganado en cada nivel de dificultad
 function cargaCookie() {
-  if (nivel == 10) {
-    var resultado = getCookie("trofeos10");
-    trofeos = resultado;
-    if (trofeos != 0) {
-      document.getElementById("trofeos").innerHTML = "";
-      for (var i = 0; i < trofeos; i++) {
-        document.getElementById("trofeos").innerHTML +=
-          '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> ';
-      }
-    } else {
-      document.getElementById("trofeos").innerHTML = "First Get A Trophy";
+  var resultado = getCookie(`trofeos${nivel}`);
+  trofeos = resultado;
+  if (trofeos != 0) {
+    document.getElementById("trofeos").innerHTML = "";
+    for (var i = 0; i < trofeos; i++) {
+      document.getElementById("trofeos").innerHTML +=
+        '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> ';
     }
-  }
-  if (nivel == 20) {
-    var resultado = getCookie("trofeos20");
-    trofeos = resultado;
-    if (trofeos != 0) {
-      document.getElementById("trofeos").innerHTML = "";
-      for (var i = 0; i < trofeos; i++) {
-        document.getElementById("trofeos").innerHTML +=
-          '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> ';
-      }
-    } else {
-      document.getElementById("trofeos").innerHTML = "First Get A Trophy";
-    }
-  }
-  if (nivel == 30) {
-    var resultado = getCookie("trofeos30");
-    trofeos = resultado;
-    if (trofeos != 0) {
-      document.getElementById("trofeos").innerHTML = "";
-      for (var i = 0; i < trofeos; i++) {
-        document.getElementById("trofeos").innerHTML +=
-          '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> ';
-      }
-    } else {
-      document.getElementById("trofeos").innerHTML = "First Get A Trophy";
-    }
-  }
-  if (nivel == 40) {
-    var resultado = getCookie("trofeos40");
-    trofeos = resultado;
-    if (trofeos != 0) {
-      document.getElementById("trofeos").innerHTML = "";
-      for (var i = 0; i < trofeos; i++) {
-        document.getElementById("trofeos").innerHTML +=
-          '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> ';
-      }
-    } else {
-      document.getElementById("trofeos").innerHTML = "First Get A Trophy";
-    }
-  }
-  if (nivel == 50) {
-    var resultado = getCookie("trofeos50");
-    trofeos = resultado;
-    if (trofeos != 0) {
-      document.getElementById("trofeos").innerHTML = "";
-      for (var i = 0; i < trofeos; i++) {
-        document.getElementById("trofeos").innerHTML +=
-          '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> ';
-      }
-    } else {
-      document.getElementById("trofeos").innerHTML = "First Get A Trophy";
-    }
-  }
-  if (nivel == 60) {
-    var resultado = getCookie("trofeos60");
-    trofeos = resultado;
-    if (trofeos != 0) {
-      document.getElementById("trofeos").innerHTML = "";
-      for (var i = 0; i < trofeos; i++) {
-        document.getElementById("trofeos").innerHTML +=
-          '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> ';
-      }
-    } else {
-      document.getElementById("trofeos").innerHTML = "First Get A Trophy";
-    }
-  }
-  if (nivel == 70) {
-    var resultado = getCookie("trofeos70");
-    trofeos = resultado;
-    if (trofeos != 0) {
-      document.getElementById("trofeos").innerHTML = "";
-      for (var i = 0; i < trofeos; i++) {
-        document.getElementById("trofeos").innerHTML +=
-          '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> ';
-      }
-    } else {
-      document.getElementById("trofeos").innerHTML = "First Get A Trophy";
-    }
-  }
-  if (nivel == 80) {
-    var resultado = getCookie("trofeos80");
-    trofeos = resultado;
-    if (trofeos != 0) {
-      document.getElementById("trofeos").innerHTML = "";
-      for (var i = 0; i < trofeos; i++) {
-        document.getElementById("trofeos").innerHTML +=
-          '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> ';
-      }
-    } else {
-      document.getElementById("trofeos").innerHTML = "First Get A Trophy";
-    }
-  }
-  if (nivel == 140) {
-    var resultado = getCookie("trofeos140");
-    trofeos = resultado;
-    if (trofeos != 0) {
-      document.getElementById("trofeos").innerHTML = "";
-      for (var i = 0; i < trofeos; i++) {
-        document.getElementById("trofeos").innerHTML +=
-          '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> ';
-      }
-    } else {
-      document.getElementById("trofeos").innerHTML = "First Get A Trophy";
-    }
+  } else {
+    document.getElementById("trofeos").innerHTML = "First Get A Trophy";
   }
 }
 
