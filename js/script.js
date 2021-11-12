@@ -172,16 +172,8 @@ function cuantosPuntos(marcador) {
 
 //Esta función sirve para, dependiendo del nivel, cargar unos iconos u otros
 function creaNivel() {
-  if (nivel <= 50) {
-    document.getElementById("marcador").innerHTML =
-      '<i class="fa fa-star" style="font-size:28px; color:white;" id="star1"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star2"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star3"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star4"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star5"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star6"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star7"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star8"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star9"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star10"></i>';
-  } else if (nivel <= 80) {
-    document.getElementById("marcador").innerHTML =
-      '<i class="fa fa-flash" style="font-size:28px; color:white;" id="star1"></i>   <i class="fa fa-flash" style="font-size:28px; color:white;" id="star2"></i> <i class="fa fa-flash" style="font-size:28px; color:white;" id="star3"></i> <i class="fa fa-flash" style="font-size:28px; color:white;" id="star4"></i> <i class="fa fa-flash" style="font-size:28px; color:white;" id="star5"></i> <i class="fa fa-flash" style="font-size:28px; color:white;" id="star6"></i> <i class="fa fa-flash" style="font-size:28px; color:white;" id="star7"></i> <i class="fa fa-flash" style="font-size:28px; color:white;" id="star8"></i> <i class="fa fa-flash" style="font-size:28px; color:white;" id="star9"></i> <i class="fa fa-flash" style="font-size:28px; color:white;" id="star10"></i>';
-  } else if (nivel <= 140) {
-    document.getElementById("marcador").innerHTML =
-      '<i class="	fa fa-mortar-board" style="font-size:20px; color:white;" id="star1"></i>   <i class="fa fa-mortar-board" style="font-size:20px; color:white;" id="star2"></i> <i class="fa fa-mortar-board" style="font-size:20px; color:white;" id="star3"></i> <i class="fa fa-mortar-board" style="font-size:20px; color:white;" id="star4"></i> <i class="fa fa-mortar-board" style="font-size:20px; color:white;" id="star5"></i> <i class="fa fa-mortar-board" style="font-size:20px; color:white;" id="star6"></i> <i class="fa fa-mortar-board" style="font-size:20px; color:white;" id="star7"></i> <i class="fa fa-mortar-board" style="font-size:20px; color:white;" id="star8"></i> <i class="fa fa-mortar-board" style="font-size:20px; color:white;" id="star9"></i> <i class="fa fa-mortar-board" style="font-size:20px; color:white;" id="star10"></i>';
-  }
+  document.getElementById("marcador").innerHTML =
+    '<i class="fa fa-star" style="font-size:28px; color:white;" id="star1"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star2"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star3"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star4"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star5"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star6"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star7"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star8"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star9"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star10"></i>';
 }
 
 //Esta función actualiza y guarda las cookies de los trofeos ganados
