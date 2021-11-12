@@ -142,9 +142,9 @@ function marcadorEstrellas(_marcador) {
 //Al conseguir un nuevo trofeo todos los iconos se ponen en blanco
 function cuantosPuntos(marcador) {
   document.getElementById("contadorSpan").innerText =
-    50 - marcador + " Points Left to Get a TROPHY";
+    20 - marcador + " Points Left to Get a TROPHY";
 
-  if (50 - marcador == 0) {
+  if (20 - marcador == 0) {
     if (trofeos == 0) {
       document.getElementById("trofeos").innerHTML =
         '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> ';
