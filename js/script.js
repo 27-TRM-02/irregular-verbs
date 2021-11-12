@@ -57,34 +57,8 @@ function comprueba() {
 
 //En esta función elegimos el verbo que va a salir por pantalla(dependiendo del nivel que sea van a salir  más o menos verbos)
 function eligeVerbo() {
-  if (nivel == 10) {
-    verboElegido = Math.floor(Math.random() * 10);
-    tiempoAAdivinar = Math.floor(Math.random() * 3);
-  } else if (nivel == 20) {
-    verboElegido = Math.floor(Math.random() * 20);
-    tiempoAAdivinar = Math.floor(Math.random() * 3);
-  } else if (nivel == 30) {
-    verboElegido = Math.floor(Math.random() * 30);
-    tiempoAAdivinar = Math.floor(Math.random() * 3);
-  } else if (nivel == 40) {
-    verboElegido = Math.floor(Math.random() * 40);
-    tiempoAAdivinar = Math.floor(Math.random() * 3);
-  } else if (nivel == 50) {
-    verboElegido = Math.floor(Math.random() * 50);
-    tiempoAAdivinar = Math.floor(Math.random() * 3);
-  } else if (nivel == 60) {
-    verboElegido = Math.floor(Math.random() * 60);
-    tiempoAAdivinar = Math.floor(Math.random() * 3);
-  } else if (nivel == 70) {
-    verboElegido = Math.floor(Math.random() * 70);
-    tiempoAAdivinar = Math.floor(Math.random() * 3);
-  } else if (nivel == 80) {
-    verboElegido = Math.floor(Math.random() * 80);
-    tiempoAAdivinar = Math.floor(Math.random() * 3);
-  } else if (nivel == 140) {
-    verboElegido = Math.floor(Math.random() * 140);
-    tiempoAAdivinar = Math.floor(Math.random() * 3);
-  }
+  verboElegido = Math.floor(Math.random() * nivel);
+  tiempoAAdivinar = Math.floor(Math.random() * 3);
   document.getElementById("castellano").innerHTML = verbos[verboElegido][3];
 
   if (tiempoAAdivinar == 0) {
