@@ -183,6 +183,37 @@ var nivel = window.location.hash.substring(1)
                
         }
 
+        //Esta función sirve para contar los puntos que faltan para un trofeo y actualiza los trofeos que tenemos
+        //Al conseguir un nuevo trofeo todos los iconos se ponen en blanco
+        function cuantosPuntos(marcador){
+            document.getElementById("contadorSpan").innerText = (50-marcador) + " Points Left to Get a TROPHY";
+            
+            if(50-marcador == 0){
+                if(trofeos == 0){
+                    document.getElementById("trofeos").innerHTML = '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> '
+
+                } else {
+                    document.getElementById("trofeos").innerHTML += '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> '
+                    
+                }
+                trofeos++;
+                trofeosCookies(trofeos);
+                document.getElementById("star1").style.color = "white";
+                document.getElementById("star2").style.color = "white";
+                document.getElementById("star3").style.color = "white";
+                document.getElementById("star4").style.color = "white";
+                document.getElementById("star5").style.color = "white";
+                document.getElementById("star6").style.color = "white";
+                document.getElementById("star7").style.color = "white";
+                document.getElementById("star8").style.color = "white";
+                document.getElementById("star9").style.color = "white";
+                document.getElementById("star10").style.color = "white";
+                return 0;
+            } else {
+                return -1;
+            }
+        }
+
 
         //Esta función sirve para, dependiendo del nivel, cargar unos iconos u otros
         function creaNivel(){
@@ -232,9 +263,130 @@ var nivel = window.location.hash.substring(1)
         }
 
 
-       
+        //Esta función va cargar la información de las cookies para que tengamos los trofeos que
+        //ya habíamos ganado en cada nivel de dificultad
+        function cargaCookie(){
+            if(nivel == 10){
+                var resultado = getCookie("trofeos10");
+                trofeos = resultado;
+                if(trofeos != 0){
+                    document.getElementById("trofeos").innerHTML = ''
+                    for(var i = 0; i<trofeos; i++){
+                    
+                    document.getElementById("trofeos").innerHTML += '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> '
+                    } 
+                }  else {
+                    document.getElementById("trofeos").innerHTML = 'First Get A Trophy'
+                }
+            }
+            if(nivel == 20){
+                var resultado = getCookie("trofeos20");
+                trofeos = resultado;
+                if(trofeos != 0){
+                    document.getElementById("trofeos").innerHTML = ''
+                    for(var i = 0; i<trofeos; i++){
+                    
+                    document.getElementById("trofeos").innerHTML += '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> '
+                    }
+                } else {
+                    document.getElementById("trofeos").innerHTML = 'First Get A Trophy'
+                }
+            }
+            if(nivel == 30){
+                var resultado = getCookie("trofeos30");
+                trofeos = resultado;
+                if(trofeos != 0){
+                    document.getElementById("trofeos").innerHTML = ''
+                    for(var i = 0; i<trofeos; i++){
+                    
+                    document.getElementById("trofeos").innerHTML += '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> '
+                    }
+                } else {
+                    document.getElementById("trofeos").innerHTML = 'First Get A Trophy'
+                }
+            }
+            if(nivel == 40){
+                var resultado = getCookie("trofeos40");
+                trofeos = resultado;
+                if(trofeos != 0){
+                    document.getElementById("trofeos").innerHTML = ''
+                    for(var i = 0; i<trofeos; i++){
+                    
+                    document.getElementById("trofeos").innerHTML += '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> '
+                    }
+                } else {
+                    document.getElementById("trofeos").innerHTML = 'First Get A Trophy'
+                }
+            }
+            if(nivel == 50){
+                var resultado = getCookie("trofeos50");
+                trofeos = resultado;
+                if(trofeos != 0){
+                    document.getElementById("trofeos").innerHTML = ''
+                    for(var i = 0; i<trofeos; i++){
+                    
+                    document.getElementById("trofeos").innerHTML += '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> '
+                    }
+                } else {
+                    document.getElementById("trofeos").innerHTML = 'First Get A Trophy'
+                }
+            }
+            if(nivel == 60){
+                var resultado = getCookie("trofeos60");
+                trofeos = resultado;
+                if(trofeos != 0){
+                    document.getElementById("trofeos").innerHTML = ''
+                    for(var i = 0; i<trofeos; i++){
+                    
+                    document.getElementById("trofeos").innerHTML += '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> '
+                    }
+                } else {
+                    document.getElementById("trofeos").innerHTML = 'First Get A Trophy'
+                }
+            }
+            if(nivel == 70){
+                var resultado = getCookie("trofeos70");
+                trofeos = resultado;
+                if(trofeos != 0){
+                    document.getElementById("trofeos").innerHTML = ''
+                    for(var i = 0; i<trofeos; i++){
+                    
+                    document.getElementById("trofeos").innerHTML += '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> '
+                    }
+                } else {
+                    document.getElementById("trofeos").innerHTML = 'First Get A Trophy'
+                }
+            }
+            if(nivel == 80){
+                var resultado = getCookie("trofeos80");
+                trofeos = resultado;
+                if(trofeos != 0){
+                    document.getElementById("trofeos").innerHTML = ''
+                    for(var i = 0; i<trofeos; i++){
+                    
+                    document.getElementById("trofeos").innerHTML += '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> '
+                    }
+                } else {
+                    document.getElementById("trofeos").innerHTML = 'First Get A Trophy'
+                }
+            }
+            if(nivel == 140){
+                var resultado = getCookie("trofeos140");
+                trofeos = resultado;
+                if(trofeos != 0){
+                    document.getElementById("trofeos").innerHTML = ''
+                    for(var i = 0; i<trofeos; i++){
+                    
+                    document.getElementById("trofeos").innerHTML += '<i class="fa fa-trophy" style="font-size:28px; color:yellow;"></i> '
+                    }
+                } else {
+                    document.getElementById("trofeos").innerHTML = 'First Get A Trophy'
+                }
+            }
+        }
 
         
         cuantosPuntos(0);
+        cargaCookie();
         creaNivel();
         eligeVerbo();
