@@ -128,16 +128,11 @@ function cuantosPuntos(marcador) {
     }
     trofeos++;
     trofeosCookies(trofeos);
-    document.getElementById("star1").style.color = "white";
-    document.getElementById("star2").style.color = "white";
-    document.getElementById("star3").style.color = "white";
-    document.getElementById("star4").style.color = "white";
-    document.getElementById("star5").style.color = "white";
-    document.getElementById("star6").style.color = "white";
-    document.getElementById("star7").style.color = "white";
-    document.getElementById("star8").style.color = "white";
-    document.getElementById("star9").style.color = "white";
-    document.getElementById("star10").style.color = "white";
+    for (let index = 1; index <= 10; index++) {
+      document.getElementById(`star${index}`).style.color = "white";
+      document.getElementById(`star${index}`).classList.remove("fa-star-half");
+      document.getElementById(`star${index}`).classList.add("fa-star");
+    }
     return 0;
   } else {
     return -1;
@@ -146,14 +141,16 @@ function cuantosPuntos(marcador) {
 
 //Esta función sirve para, dependiendo del nivel, cargar unos iconos u otros
 function creaNivel() {
-  document.getElementById("marcador").innerHTML =
-    '<i class="fa fa-star" style="font-size:28px; color:white;" id="star1"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star2"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star3"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star4"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star5"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star6"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star7"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star8"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star9"></i> <i class="fa fa-star" style="font-size:28px; color:white;" id="star10"></i>';
+  for (let index = 1; index <= 10; index++) {
+    document.getElementById(
+      "marcador"
+    ).innerHTML += `<i class="fa fa-star" style="font-size:28px; color:white;" id="star${index}"></i>`;
+  }
 }
 
 //Esta función actualiza y guarda las cookies de los trofeos ganados
 function trofeosCookies(trofeos) {
-    document.cookie =
-    `trofeos${nivel}=${trofeos}; expires=Thu, 01 Jan 2022 00:00:00 UTC;`;
+  document.cookie = `trofeos${nivel}=${trofeos}; expires=Thu, 01 Jan 2022 00:00:00 UTC;`;
 }
 
 //Esta función va a servir para conseguir la información de la cookie que buscamos
